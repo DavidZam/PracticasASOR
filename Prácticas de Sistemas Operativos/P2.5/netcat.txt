@@ -1,0 +1,29 @@
+Uso de netcat (nc):
+
+ - Comunicación misma máquina (localhost):
+"nc -l -p <puerto>"
+Otra terminal misma maquina:
+"nc localhost <puerto>"
+
+- Comunicación misma máquina (localhost) protocolo UDP:
+"nc -u -l -p <puerto>"
+Otra terminal misma maquina:
+"nc -u localhost <puerto>"
+
+ - Comunicacion servidor cliente protocolo UDP(plantillas):
+En el servidor:
+./plantillaUDPserver <dirIP> <puerto>
+En la máquina cliente: 
+nc -u <dirIPserver> <puerto>
+
+ - Comunicacion servidor cliente protocolo UDP(getaddrinfo):
+En el servidor:
+./UDPserver <puerto>
+En la máquina cliente: 
+./UDPclient <dirIPserver> <puerto> <msg>
+
+ - Comunicacion servidor cliente protocolo TCP(plantillas):
+En el servidor:
+./plantillaTCPserver <dirIP> <puerto>
+En la máquina cliente: 
+nc <dirIPserver> <puerto>
